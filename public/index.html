@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+<ul id="result">
+    <li>First</li>
+</ul>
+<script>
+    const getJson = async (file) => {
+        const response = await fetch(file + '.json')
+        return await response.json()
+    }
+
+    const main = async () => {
+        const object = await getJson('test')
+        var newLi = document.createElement('li');
+        newLi.innerHTML = object.name;
+        document.querySelector('#result').appendChild(newLi)
+    }
+
+    main()
+</script>
+</body>
+</html>

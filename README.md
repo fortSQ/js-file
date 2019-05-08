@@ -1,2 +1,12 @@
-# js-file
-Node.js server + Ajax file reading
+# Run
+
+```bash
+npm start
+```
+
+# Output
+
+```html
+* First
+* Second
+```
